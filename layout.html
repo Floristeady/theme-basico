@@ -94,9 +94,9 @@
     <section id="container" role="main">
       
       <!-- if template == 'products' -->
-        <div id="breadcrumbs" class="bread-products hide">
+        <nav id="breadcrumbs" class="bread-products hide">
          <!-- include 'breadcrumb_products' -->
-        </div>
+        </nav>
         <div id="sidebar" class="hide">
          <!-- include 'sidebar' -->
         </div>
@@ -104,9 +104,9 @@
           <!--{{ content_for_layout }}-->
         </div>
       <!-- else -->
-        <div id="breadcrumbs" class="bread-general hide">
+        <nav id="breadcrumbs" class="bread-general hide">
 		   <!-- include 'breadcrumb' (no in home and products) -->
-		</div>
+		</nav>
         <div id="content" class="hide all clearfix">
           <!--{{ content_for_layout }}-->
         </div>
