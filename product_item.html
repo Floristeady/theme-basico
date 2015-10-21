@@ -1,0 +1,32 @@
+<li class="item-{{ product_item_counter }} clearfix">
+
+  <div class="inner">
+  
+  <div class="extras">
+
+    <span class="circle">
+      <a href="#" title="ver producto" class="more"></a>
+    </span>
+  </div>
+    
+  <div class="image-centerer">
+    <a href="#" class="product-image">
+      <img src="http://placehold.it/240x240" alt="{{ product_item.model }}" />
+    </a>
+  </div>
+
+  <h4 class="product-model">
+    <a href="#" title="{{ product_item.model }}">Nombre Producto</a>
+  </h4>
+
+  <!-- unless product_item.price.zero -->
+    <div class="prices">
+      <!--  if product_item.has_price_comparison -->
+        <strike class="product-price-comparison">$340,00<!--price_comparison --> </strike>
+      <!--  endif -->
+      <span class="product-price">$300,00<!--price --> </span>
+    </div>
+  <!--  endunless -->
+
+  </div>
+</li>

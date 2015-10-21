@@ -1,0 +1,18 @@
+<div class="columns medium-9 small-centered">
+{% if form.sent %}
+
+  <div class="entry bootic_sent_contact_message">
+    {{ 'forms.messages.sent' | t }}
+  </div>
+
+{% else %}
+
+  <div class="entry">
+    {{ form.body }}
+  </div>
+
+  {% contact_form_fields %}
+
+{% endif %}
+
+</div>

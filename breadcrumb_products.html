@@ -1,0 +1,28 @@
+<nav id="breadcrumbs"  class="bread-products">
+    <p>
+      <a href="/" class="home">Inicio</a>
+      <span class="nav-separator"> › </span>
+      
+      <a class="item-products" href="/products.html">Productos</a>
+      <span class="nav-separator"> › </span>
+    </p>
+      
+    <h1 class="current">
+    <!-- if category -->
+      <a href="{{collection.url}}">
+       <!-- {{collection.title}} -->  Nombre Categoría
+      </a>  
+      <span class="nav-separator hide"> ›</span> 
+     <!-- if category and subcategories -->
+      <a href="{{collection.url}}" >
+       <!-- {{collection.title}} -->
+      </a> 
+      <span class="nav-separator hide"> ›  </span> 
+	  <span class="hide">Subcategoría</span>
+      <!-- endif -->
+      
+    <!-- elsif resource -->
+      <span><!-- {{ resource.title }} --></span>
+    <!-- endif -->
+   </h1>
+</nav>

@@ -1,0 +1,28 @@
+<nav id="breadcrumbs" class="bread-general">
+  <div class="bread-inner">
+    <p>
+      <a href="/" class="home">Inicio</a>
+      <span class="nav-separator"> › </span>
+        
+    <!-- if template == 'search' -->    
+      <h2 class="current hide"><span><!--{{ products | size }}--> producto(s) encontrado(s)</span></h2>
+    <!-- endif  --> 
+  
+   <!-- if template == 'cart'  -->  
+       <span class="hide">Carro de compras</span>     
+       <h1 class="current hide"><span><!--{{ 'orders.titles.cart' | t }}--></span></h1>
+    <!-- endif  --> 
+      
+    <!-- if product.has_collections  --> 
+     	<!-- for collection in product.collections limit: 1  -->  
+        <a class="subtitle hide" href="{{ collection.url }}"><!--{{ collection.title }}--></a>
+		<span class="nav-separator hide"> › </span>
+		<!-- endfor  --> 
+    <!-- endif  --> 
+      
+     <!-- if resource --> 
+      <h1 class="current"><span>Título página<!--{{ resource.title }}--></span></h1>
+     <!-- endif --> 
+     </p>
+  </div>
+</nav>

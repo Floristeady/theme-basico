@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <!-- editable -->
+  <meta name="description" content="descripción tienda">
+  <!-- editable -->
+  <title>titulo pagina actual - nombre tienda</title>
+  <meta name="author" content="Spincommerce">
+  <meta name="Robots" content="all"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x7.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"/>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Lusitana:400,700' rel='stylesheet' type='text/css'>
+  
+  <script src="js/modernizr.js"></script>
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- if product / for facebook share-->
+  <meta property="og:type" content="product"/>
+  <meta property="og:title" content="{{ product.title }}"/>
+  	<!-- if product.has_images -->
+  	<meta property="og:image" content="{{ product.first_image.small }}"/>
+  	<!-- endif -->
+  <!-- endif -->
+
+  <!--[if lte IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- here Google Analytics code -->
+</head>
+
+<body id="{{ template }}">
+  <div id="box" class="row">
+
+    <header id="header">
+	  	<div class="column small-9 medium-4 left">
+		    <div id="searchform">
+			      <!-- search -->
+		          <form action="/search" method="get">
+		          <input type="text" name="q" value="Buscar productos" onfocus="if(this.value=='Buscar productos')this.value='';" onblur="if(this.value=='')this.value='Buscar productos';"/>
+		          </form>
+		    </div>
+	  	</div>
+	  	
+  	  <div class="column small-3 medium-4 right">
+	       <div id="cart-preview" class="<!-- if current link add class 'current'-->">
+	         <a href="cart.html" class="data" title="ir al carro">
+		       <!-- products in cart -->
+	           <span class="cart"><span class="count">0</span></span>
+	           <span class="text show-for-medium-up">Mi Carro</span>
+	           </a>
+	      </div>
+  	 </div>
+	  	
+	  <div class="column medium-4">
+	  	<h1 class="site-header site-logo center">
+	        <a href="/">
+	         <!--if logo-->
+	         <img class="hide" src="" alt="{{ shop.name }}" />
+	         <!--elsif shop title-->
+	          Tienda Basico
+	         <!--endif-->
+	        </a>
+        </h1>
+	  </div>
+
+      <nav id="menu-main">
+        <ul>
+       <!-- for menu -->
+       		<li class="menuitem-<!-- if current link add class 'current'-->">
+	          <a class="item-products" href="products.html">Productos</a>
+	        </li>
+	        <li class="menuitem-<!-- if current link add class 'current'-->">
+	          <a class="item-product" href="product.html">Producto</a>
+	        </li>
+	        <li class="menuitem-<!-- if current link add class 'current'-->">
+	          <a class="item-page" href="page.html">Página</a>
+	        </li>
+	        <li class="menuitem-<!-- if current link add class 'current'-->">
+	          <a class="item-cart" href="cart.html">Carro</a>
+	        </li>
+       <!-- end for -->
+        </ul>
+      </nav>
+  
+    </header>
+  
+    <section id="container" role="main">
+      
+      <!-- if template == 'products' -->
+        <div id="breadcrumbs" class="bread-products hide">
+         <!-- include 'breadcrumb_products' -->
+        </div>
+        <div id="sidebar" class="hide">
+         <!-- include 'sidebar' -->
+        </div>
+        <div id="content" class="hide products clearfix">
+          <!--{{ content_for_layout }}-->
+        </div>
+      <!-- else -->
+        <div id="breadcrumbs" class="bread-general hide">
+		   <!-- include 'breadcrumb' (no in home and products) -->
+		</div>
+        <div id="content" class="hide all clearfix">
+          <!--{{ content_for_layout }}-->
+        </div>
+      <!-- endif %} -->
+        
+    </section>
+  
+    <footer id="footer">
+      <div class="footer-content">
+		  <div class="columns medium-3">
+		    <h4>Contacto</h4>
+		    <!-- pages.footer.body or manually? -->
+		    <p>Spincommerce Store<br/>
+			Principal Street 123, New York.</p>
+			<p>contact@spincommerce.com<br/>
+			  +52 44221144
+			</p>
+		  </div>  
+		  
+		  <div class="columns medium-3">		   
+		    <h4>Links</h4>
+		    <ul class="menu-footer">
+			    <!-- for menu -->
+			    <li><a href="#">Página</a></li>
+			    <!-- end for menu -->
+		    </ul>
+		  </div> 
+		  
+		  
+		  <div class="columns medium-3">
+		    <h4>Redes Sociales</h4>
+		    <!-- for now manually -->
+		    <ul id="social-links" class="clearfix">
+		      <li class="facebook-link">
+		        <a target="_blank" title="Facebook!" href="https://www.facebook.com/Corpspin">Conócenos!</a>
+		      </li>
+		      <li class="twitter-link">
+		        <a target="_blank" title="Twitter!" href="https://twitter.com/CorpSpin">Síguenos!</a>
+		      </li>
+		      <li class="instagram-link">
+		        <a target="_blank" title="Instagram!" href="https://instagram.com">Visítanos</a>
+		      </li>
+		      
+		      <li class="pinterest-link">
+		        <a target="_blank" title="Instagram!" href="https://www.pinterest.com">Visítanos</a>
+		      </li>
+		      
+		      <li class="youtube-link">
+		        <a target="_blank" title="Youtube!" href="https://www.youtube.com">Visítanos</a>
+		      </li>
+
+		      <li class="google-link">
+		        <a target="_blank" title="Google+!" href="https://plus.google.com/+Corpspin/posts">Conócenos!</a>
+		      </li>
+		  </ul>
+		
+		  </div> 
+		  <div class="columns medium-3 newsletter">
+		    <h4>Newsletter</h4>
+		    <!-- for now manually -->
+		    <form action="http://corpspin.createsend.com/t/j/s/mstj/" method="post">
+		    <p>
+		        <input id="fieldEmail" name="cm-mstj-mstj" type="email" required placeholder="Correo electrónico" />
+		        <button class="mybutton small" type="submit">Suscribirme</button>
+		    </p>
+		</form>
+		  </div> 
+		 </div>
+    </footer>
+  
+  </div>
+  
+   <!-- if product -->
+  <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+   <!-- endif -->
+
+   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+   <script src="js/default.js"></script>
+   <script src="js/script.js"></script>
+    <!-- temporal for js include -->
+   <script src="js/preview.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<div class="columns medium-6">
+  <!-- if product.has_images -->
+  <div id="product-gallery" class="clearfix flexslider">
+       <div class="loading"></div>
+       <ul id="main-image" class="slides">
+       <!-- for image in product.images limit:10 -->
+          <li data-thumb="http://placehold.it/86x86">
+            <img src="http://placehold.it/530x530" alt="{{ product.model }}" />
+          </li>   
+       <!-- endfor -->
+       </ul>
+  </div>
+ <!-- endif-->
+</div>
+
+<div id="product" class="columns medium-6">
+  <div id="product-main" class="clearfix">
+  
+    <!-- unless product.price.zero -->
+    <h2 id="product-price">
+      <!-- product.price.format --> $300,00
+      <!-- if product.has_price_comparison -->
+       <span class="product-price-comparison">
+          <strike> $340,00 <!--price_comparison --></strike>
+        </span>
+      <!-- endif -->
+    </h2>
+    <!-- endunless -->
+  
+    <div id="product-description" class="entry">
+      <!-- product.description | format_text -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet luctus eros, vitae pulvinar nulla. Ut scelerisque ultricies sagittis. Nam mattis tellus sed turpis convallis, sed efficitur odio lobortis. Nullam fringilla consequat sem, et consequat neque malesuada a. Nam sodales tincidunt magna vel ultrices.</p>
+    </div>
+  
+    <!-- cart -->
+    <form class="add_to_cart" action="/cart/cart_items" method="post"> 
+	    
+	<div class="selector-variants">
+		<label for="productSelect-option-0">Tamaño <!-- nombre variante --></label>
+		<select class="single-option-selector" data-option="option1" id="productSelect-option-0">
+			<option value="Grande">Grande</option>
+			<option value="Mediana">Mediana</option>
+			<option value="Chica">Chica</option>
+			<option disabled value="Regular">Regular <em class="out-of">(agotada)</em></option>
+		</select>
+	</div>
+	 
+	<div class="radio-variants"> 
+		<label for="productSelect-option-0">Color <!-- nombre variante --></label> 
+		  
+	    <ul class="variants">
+	      <li class="available odd">
+	        <input type="radio" name="cart_item[variant_id]" value="141060" id="cart_item_variant_id_141060" checked="checked">
+	        <label for="cart_item_variant_id_141060">
+	          <span class="bootic_variant_title">Verde</span>
+	        </label>
+	      </li>
+	      
+	      <li class="available even">
+	        <input type="radio" name="cart_item[variant_id]" value="147280" id="cart_item_variant_id_147280">
+	        <label for="cart_item_variant_id_147280">
+	          <span class="bootic_variant_title">Rojo</span>
+	        </label>
+	      </li>
+	      
+	      
+	      <li class="unavailable">
+	        <input type="radio" name="cart_item[variant_id]" value="147281" disabled="disabled" id="cart_item_variant_id_147281">
+	        <label for="cart_item_variant_id_147281">
+	          <span class="variant_title">Azul</span>
+	          <em class="out-of">(agotada)</em>
+	        </label>
+	      </li>
+	      
+	    </ul>
+	</div>
+	 
+	<div class="input-cart clear">
+	  <!-- quantity -->
+	  <input type="number" name="cart_item[quantity]" size="2" value="1" id="cart-quantity" min="1">
+	  
+	   <!-- button cart -->
+	  <button type="submit" name="add" id="cart-button" class="submit">
+	  	<span id="AddToCartText">Agregar al Carro</span>
+	  </button>
+	</div>
+	  
+	</form>
+	<!-- end cart -->
+	
+	<!-- social share - here I need code for product.url -->
+	 <div id="share-social" class="show-for-medium-up"> 
+       <p>Compartir:</p>
+      <a target="_blank" class="facebook-link" href="http://www.facebook.com/sharer.php?u={{ product.url }}"><span>Facebook</span></a>     
+      <a target="_blank" class="twitter-link" href="http://twitter.com/home?status={{ product.title }} {{ product.url }}"><span>Twitter</span></a>
+      <a class="google-link" href="https://plus.google.com/share?url={{ product.url  }}" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">Google+</a>
+       <span class="pin-link"><a class="" target="_blank" href="//pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-config="none">PinIt</a></span>
+    </div>
+      
+  </div>
+</div>
+

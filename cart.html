@@ -1,0 +1,97 @@
+<div class="columns small-12">
+
+<!-- if cart.units > 0 -->
+  <div class="entry edit">
+  <!-- pages.text-for-cart.body -->
+  </div>
+
+  <!-- cart -->
+  <form action="/cart" class="edit_order_with_promotion" id="edit_order_with_promotion_1566850" method="post"><div style="margin:0;padding:0;display:inline"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="gQDKC27yNud9LiayCE5SnGfWUIUbDgv+22RBbzMDCnA="></div>
+
+		<table border="0" cellspacing="5" cellpadding="5" class="cart_table">
+			<thead>
+				<tr>
+					<th colspan="2">Producto</th>
+					<th>Variante 1</th>
+					<th>Variante 2</th>
+					<th>Precio</th>
+					<th>Cantidad</th>
+					<th>Subtotal</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+	
+				<tr class="odd">
+					<td class="cart_item_thumb"><img alt="nombre producto" src="http://placehold.it/75x75"></td>
+					<td class="cart_item_name">
+						<a href="/product.html">Producto con nombre</a>
+					</td>
+					
+					<td class="cart_item_variant_1">Azul</td>
+					<td class="cart_item_variant_1">Chico</td>
+					<td class="cart_item_price">$160.00</td>
+					<!-- update auto -->
+					<td class="cart_item_qty">
+						<input id="cart_item_attributes__quantity" name="cart[item_attributes][][quantity]" size="2" type="number" value="1">		
+					</td>
+					<td class="cart_item_total">$160.00</td>
+					<!-- update auto -->
+					<td>
+						<input id="cart_item_attributes__id" name="cart[item_attributes][][id]" type="hidden" value="1681601">
+						<a href="/cart" class="remove" title="Eliminar producto del carro">Remover</a>
+					</td>
+	
+				</tr>
+				
+				<tr class="even">
+					<td class="cart_item_thumb"><img alt="nombre producto" src="http://placehold.it/75x75"></td>
+					<td class="cart_item_name">
+						<a href="/product.html">Producto con nombre</a>
+					</td>
+					
+					<td class="cart_item_variant_1">Azul</td>
+					<td class="cart_item_variant_1"><em>sin variante</em></td>
+					<td class="cart_item_price">$80.00</td>
+					<td class="cart_item_qty">
+						<input id="cart_item_attributes__quantity" name="cart[item_attributes][][quantity]" size="2" type="number" value="2">		
+					</td>
+					<td class="cart_item_total">$160.00</td>
+					<td>
+						<input id="cart_item_attributes__id" name="cart[item_attributes][][id]" type="hidden" value="1681601">
+						<a href="/cart/cart_items/1681601" class="remove" title="Eliminar producto del carro">Remover</a>
+					</td>
+				</tr>
+	
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td class="cart_total_items">Subtotal*:</td>
+					<td colspan="2" class="cart_total_price"><strong>$320.00</strong></td>
+				</tr>
+			</tfoot>
+		</table>
+		<p>* En el siguiente paso se calculará el costo de despacho.</p>
+	
+		<!-- /total -->
+		<p class="cart_action_buttons">
+			<a href="/" class="back button-gray button">« Seguir comprando</a>
+			<input class="next button right" name="cart_action" type="submit" value="Pagar mi orden »">
+		</p>
+		
+	</form>
+  
+<!-- else -->
+<div class="message_empty_cart entry">
+  <p><!-- 'orders.messages.empty_cart' | t -->
+  Tu carro de compras está vacío. Revisa nuestros <a href="/products">productos</a> y agrégalos al carro!
+  </p>
+</div>
+<!-- endif -->
+
+</div>

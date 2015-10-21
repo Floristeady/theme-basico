@@ -1,0 +1,14 @@
+  <ul id="shop-catalog" class="menu">
+  <!-- for link in menus.catalog.links -->
+       <!--if collection  == link %}
+        <li class="{{ ' current' | if_current_page: link }}">
+         <a href="{{ link.url }}">Todo de {{ link.title }}</a>
+        </li>
+       <!-- for tipo in link.product_types / subcategories -->
+         <li class="level-two {% if product_type == tipo %} current {% endif %}">
+           <a href="#">Subcategoría</a>
+         </li>
+       <!-- endfor-->
+       <!-- endif -->
+  <!-- endfor -->
+  </ul>
