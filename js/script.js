@@ -55,20 +55,20 @@ jQuery(function($){
 	      }
 	   }); 
    }
-
-   $(window).resize(function(){
-     onLoadAndResize();
-   });
    
 /************************* 
  Execution
 **************************/
-  $(document).ready(function(){
 
-    onLoadAndResize();
-    getbrowserwidth();
-        
-   });
+   $(window).resize(function(){
+	 	getbrowserwidth(); 
+	 	onLoadAndResize();
+	});
+   
+	$(document).ready(function(){
+  		getbrowserwidth();
+  		onLoadAndResize();    
+   	});
   
 });
 
