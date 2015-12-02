@@ -17,7 +17,6 @@ jQuery(function($){
   }
 
   function onLoadAndResize(){
-    getbrowserwidth();
     homeSlider('#home-gallery');
     productSlider('#product-gallery');
       
